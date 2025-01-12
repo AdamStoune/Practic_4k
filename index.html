@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+< lang="en">
+<>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameRent</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>          
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><span style="color: blue;">Game</span><span style="color: red;">Rent</span></div>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#catalog">Каталог</a>
+                    <ul class="submenu">
+                        <li><a href="#consols">Консоли</a></li>
+                        <li><a href="games.html">Игры</a></li>
+                        <li><a href="aks.html">Аксессуары</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="onas.html">О нас</a>
+                    <ul class="submenu">
+                        <li><a href="index.html">Автор</a></li>
+                        <li><a href="onas.html">Правила</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="login.html" class="btn">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <h4>Аренда игровых консолей и аксессуаров!</h4>
+            <a href="#catalog" class="btn-primary">Перейти в каталог</a>
+        </section>
+
+        <section id="catalog" class="catalog">
+            <h1>Категории</h1>
+            <div class="categories">
+                <div class="card_cat">
+                    <!-- Верхняя часть -->
+                    <div class="card_top">
+                        <a href="#consols" class="card_image">
+                            <img src="img/cons_catalog/Pristavki.png" alt="">
+                        </a>
+                    </div>
+                    <!-- Нижняя часть -->
+                     <div class="card_bottom">
+                        <form class="card_button" action="#consols">
+                            <a href="#consols">Приставки</a>
+                        </form>
+                     </div>
+                </div>
+                <div class="card_cat">
+                    <!-- Верхняя часть -->
+                    <div class="card_top">
+                        <a href="games.html" class="card_image">
+                            <img src="img/game.png" alt="">
+                        </a>
+                    </div>
+                    <!-- Нижняя часть -->
+                     <div class="card_bottom">
+                        <form class="card_button" action="#consols">
+                            <a href="games.html">Игры</a>
+                        </form>
+                     </div>
+                </div>
+                <div class="card_cat">
+                    <!-- Верхняя часть -->
+                    <div class="card_top">
+                        <a href="aks.html" class="card_image">
+                            <img src="img/aksesuar.png" alt="">
+                        </a>
+                    </div>
+                    <!-- Нижняя часть -->
+                     <div class="card_bottom">
+                        <form class="card_button" action="#">
+                            <a href="aks.html">Аксессуары</a>
+                        </form>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+
+        <h1>ПРОКАТ ИГРОВЫХ ПРИСТАВОК</h1>
+        
+        <div class="container">
+
+            <!-- Блок с информацией о консолях -->
+            <section id="consols" class="section">
+                <h2>Популярные игровые консоли</h2>
+                <div class="card">
+                    <img src="img/cons_catalog/Pristavki.png" alt="PlayStation 5">
+                    <div class="card-content">
+                        <h3>PlayStation 5</h3>
+                        <p>Мощная консоль нового поколения с поддержкой 4K-графики и огромной библиотекой игр.</p>
+                        <p>Характеристики: 16 ГБ RAM, SSD 825 ГБ, 3D-звук.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/cons_catalog/xbox_x.png" alt="Xbox Series X">
+                    <div class="card-content">
+                        <h3>Xbox Series X</h3>
+                        <p>Консоль с высочайшей производительностью, быстрым откликом и поддержкой игр в 120 FPS.</p>
+                        <p>Характеристики: 16 ГБ RAM, SSD 1 ТБ, Dolby Atmos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/cons_catalog/nintendo_switch.png" alt="Nintendo Switch">
+                    <div class="card-content">
+                        <h3>Nintendo Switch</h3>
+                        <p>Портативная консоль с уникальным игровым процессом и большими возможностями для игр с друзьями.</p>
+                        <p>Характеристики: 4 ГБ RAM, память 32 ГБ, поддержка HD-графики.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Блок с ценами -->
+            <section class="section">
+                <h2>Стоимость аренды</h2>
+                <ul class="pricing-list">
+                    <li>PlayStation 5: 30 руб./день</li>
+                    <li>Xbox Series X: 25 руб./день</li>
+                    <li>Nintendo Switch: 20 руб./день</li>
+                    <li>Дополнительные аксессуары (геймпады, VR): от 10 руб./день</li>
+                </ul>
+            </section>
+    
+            <!-- Блок с правилами -->
+            <section class="section">
+                <h2>Правила аренды</h2>
+    
+    
+                <div class="rules">
+                    <p>1. Возраст арендатора: от 18 лет.</p>
+                    <p>2. Залог за консоль: 200 руб.</p>
+                    <p>3. Проверка оборудования осуществляется при возврате.</p>
+                    <p>4. В случае повреждений стоимость ремонта вычитается из залога.</p>
+                </div>
+            </section>
+    
+            <!-- Контакты -->
+            <section class="section">
+                <h2>Свяжитесь с нами</h2>
+                <p>Телефон: +375 (29) 292-23-10</p>
+                <p>Email: info@gamerent.com</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="rows">
+            <div class="logo">
+                <span style="color: blue;">Game</span><span style="color: red;">Rent</span>
+            </div>
+            <div class="footer_catalog">
+                <ul class="nav_foot">
+                    <a href="index.html" class="f-nav-link"><li>Главная</li></a>
+                    <a href="#catalog" class="f-nav-link"><li>Категории</li></a>
+                    <a href="onas.html" class="f-nav-link"><li>Правила</li></a>
+                    <a href="contact.html" class="f-nav-link"><li>Контакты</li></a>
+                </ul>
+            </div>
+            <div class="footer_contact">
+                <a href="tel:+375292922310"><i class="fa-solid fa-square-phone"></i> +375 (29) 29-22-310</a><br>
+                <a href="tel:+3758369283"><i class="fa-solid fa-square-phone"></i> +375 (29) 83-69-283</a>
+            </div>
+            <div class="footer_icon">
+                <a href="https://t.me/RichStoune"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://vk.com/id694640703"><i class="fa-brands fa-vk"></i></a>
+                <a href="https://www.instagram.com/adam.cortese.18?igsh=MmVlMjlkMTBhMg=="><i class='fa-brands fa-instagram' style='color: red'></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,393 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    height: 100%;
+}
+
+
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: #007BFF;
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    font-size: 1.5em;
+}
+
+h2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1em;
+}
+
+h3{
+    font-size: 1em;
+}
+
+p{
+    font-size: 0.8em;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    width: 50%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.header .btn, .cart {
+    padding: 5px 10px;
+    background: #f60;
+    color: white;
+    border-radius: 5px;
+}
+
+.header .btn:hover {
+    background: #d54;
+}
+
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu > li > a:hover {
+    background-color: #444;
+}
+
+/* Стили для выпадающего меню */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.submenu > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.submenu > li > a:hover {
+    background-color: #555;
+}
+
+/* Показывает выпадающее меню при наведении */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+
+/* Баннер */
+.banner {
+    background: url('img/games/banner1.png') no-repeat center center/cover;
+    height: 300px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 0px rgb(0, 0, 0);
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+}
+
+.banner h4{
+    font-size: xx-large;
+}
+
+
+.banner .btn-primary {
+    background: #f60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banner .btn-primary:hover {
+    background: #d54;
+}
+
+
+/* Каталог */
+.catalog h2 {
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 450px);
+    width: 100%;
+    max-width: 100%; /* Ширина grid-контейнера */
+    justify-content: center;
+    justify-items: center; /* Размещаем карточку по центру */
+    column-gap: 10px; /* Отступ между колонками */
+    row-gap: 20px; /* Отступ между рядами */
+    margin: 0 auto;
+  }
+
+.card_cat {
+    width: 300px;
+    min-height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Размещаем элементы в колонку */
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+}
+
+/* При наведении на карточку - меняем цвет тени */
+.card_cat:hover {
+    box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+}
+  
+.card_top {
+    flex: 0 0 220px; /* Задаем высоту 220px, запрещаем расширение и сужение по высоте */
+    position: relative;
+    overflow: hidden; /* Скрываем, что выходит за пределы */
+}
+  
+/* Контейнер для картинки */
+.card_image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+.card_image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Встраиваем картинку в контейнер card__image */
+    transition: 0.2s;
+}
+  
+/* При наведении - увеличиваем картинку */
+.card_image:hover > img {
+    transform: scale(1.1);
+}
+  
+.card_bottom {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex: 1 0 auto; /* Занимаем всю оставшуюся высоту карточки */
+}
+
+.card_button:hover {
+    border: 1px solid #ff6633;
+}
+
+.card_button{
+    display: flex;
+    width: 85%;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 17px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #70c05b;
+    border-radius: 30px;
+    cursor: pointer; /* Меняем курсор при наведении */
+    transition: 0.2s;
+    margin-top: auto; /* Прижимаем кнопку к низу карточки */
+    margin-bottom: 10px;
+}
+
+.card_button a{
+    color: black;
+}
+  
+
+
+/*consols*/
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.section h2 {
+    color: #333;
+    border: 2px solid #70c05b;
+    border-radius: 30px;
+    text-align: center;
+    align-content: center;
+}
+
+.card {
+    display: flex;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 30px;
+    background-color: #d3d3d3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover{
+    border: 3px solid #70c05b;
+    background-color: #ababab;
+}
+
+.card img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.pricing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-list li {
+    margin: 10px 0;
+}
+
+.rules {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*contact*/
+.contact-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+
+/*pravila*/
+.pravila{
+    padding: 50px;
+}
+
+
+
+/* Подвал */
+.footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.rows{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.rows a{
+    color: #ddd;
+}
+
+.rows .logo{
+    font-size: 1.5em;
+}
+
+
+

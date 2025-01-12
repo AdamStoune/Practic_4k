@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameRent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><span style="color: blue;">Game</span><span style="color: red;">Rent</span></div>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#catalog">Каталог</a>
+                    <ul class="submenu">
+                        <li><a href="index.html">Консоли</a></li>
+                        <li><a href="games.html">Игры</a></li>
+                        <li><a href="aks.html">Аксессуары</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="onas.html">О нас</a>
+                    <ul class="submenu">
+                        <li><a href="index.html">Автор</a></li>
+                        <li><a href="onas.html">Правила</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="register.html" class="btn">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <div class="contact-container">
+        <h1>Свяжитесь с нами</h1>
+        <form action="contact.php" method="post">
+            <!-- Имя пользователя -->
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+            
+            <!-- Номер телефона -->
+            <label for="phone">Ваш номер телефона:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Введите ваш номер телефона" required>
+            
+            <!-- Адрес -->
+            <label for="address">Ваш адрес:</label>
+            <input type="text" id="address" name="address" placeholder="Введите ваш адрес" required>
+            
+            <!-- Интересующий товар -->
+            <label for="product">Интересующий товар:</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Выберите товар</option>
+                <option value="ps5">PlayStation 5</option>
+                <option value="xbox">Xbox Series X</option>
+                <option value="switch">Nintendo Switch</option>
+                <option value="games">Игра</option>
+                <option value="accessories">Аксессуары</option>
+            </select>
+            
+            <!-- Комментарий -->
+            <label for="comment">Комментарий:</label>
+            <textarea id="comment" name="comment" placeholder="Введите ваш комментарий"></textarea>
+            
+            <!-- Кнопка отправки -->
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="logo"><span style="color: blue;">Game</span><span style="color: red;">Rent</span></div>
+        <div class="footer-content">
+            <p>&copy; 2024 GameRent</p>
+            <p>Контакты: +375 (29) 292-23-10</p>
+            <p>Соцсети: Instagram | Facebook</p>
+        </div>
+    </footer>
+</body>
+</html>
